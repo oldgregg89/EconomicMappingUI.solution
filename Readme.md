@@ -2,7 +2,7 @@
 
 # _Economic Mapping UI_ 
 </strong></h1>
-![stonks](https://giphy.com/gifs/stonks-stonk-YnkMcHgNIMW4Yfmjxr)
+![stonks](https://media.giphy.com/media/YnkMcHgNIMW4Yfmjxr/giphy.gif)
 
 #### A practice in creating UI for an API within C# & .Net through the mapping of economic outputs for each state._ , 2020 ver 1.0.0_
 
