@@ -9,7 +9,7 @@
     {
         
         <div class="form-group">
-            <p>Search States: @Html.TextBox("name", null , new {@class="form-control"})</p>
+            <p>Search States: @Html.TextBox("search", null , new {@class="form-control"})</p>
         </div>
         <input type="submit" value="Search States" onclick="location.href='@Url.Action("Search", "States")';" class="btn btn-primary" />
     }

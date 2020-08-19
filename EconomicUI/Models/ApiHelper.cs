@@ -12,10 +12,10 @@ namespace EconomicUI.Models
       var response = await client.ExecuteTaskAsync(request);
       return response.Content;
     }
-    public static async Task<string> GetSearchResults(string search)
+    public static async Task<string> GetSearchResults(string name)
     {
-      RestClient client = new RestClient("http://localhost:5000/api/states");
-      RestRequest request = new RestRequest($"state/?name={search}", Method.GET);
+      RestClient client = new RestClient("http://localhost:5000/api");
+      RestRequest request = new RestRequest($"states/?name={name}", Method.GET);
       var response = await client.ExecuteTaskAsync(request);
       return response.Content;
     }
@@ -23,7 +23,7 @@ namespace EconomicUI.Models
     public static async Task<string> Get(int id)
     {
       RestClient client = new RestClient("http://localhost:5000/api");
-      RestRequest request = new RestRequest($"states/{id}", Method.GET);
+      RestRequest request = new RestRequest($"state/{id}", Method.GET);
       var response = await client.ExecuteTaskAsync(request);
       return response.Content;
     }
