@@ -8,7 +8,7 @@ namespace EconomicUI.Models
     public static async Task<string> GetAll()
     {
       RestClient client = new RestClient("http://localhost:5000/api");
-      RestRequest request = new RestRequest($"states", Method.GET);
+      RestRequest request = new RestRequest($"state", Method.GET);
       var response = await client.ExecuteTaskAsync(request);
       return response.Content;
     }

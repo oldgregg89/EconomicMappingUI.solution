@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using EconomicUI.Models;
 
-namespace EconomicMappingUI.Controllers
+namespace EconomicUI.Controllers
 {
-    public class StateController : Controller
+    public class StatesController : Controller
     {
         public IActionResult Index()
         {

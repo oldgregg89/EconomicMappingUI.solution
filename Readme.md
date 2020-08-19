@@ -7,7 +7,7 @@
 #### A practice in creating UI for an API within C# & .Net through the mapping of economic outputs for each state._ , 2020 ver 1.0.0_
 
 #### By _Ian Gregg & Kyle Hubbard & Ben Russell_
-[Economic-UI]()
+[Economic-UI](https://github.com/oldgregg89/EconomicMappingUI.solution)
 
 ## Description
 
@@ -43,10 +43,7 @@ in the terminal
 ```
 * fill in your `server`, `port`,`database`,`uid`, and `pwd`
 * Make suere to have your `MySQLWorkbench` open
-* run 
-`dotnet ef migrations add Initial`
-then `dotnet ef database update`
-
+* make sure to download [Economic-API](https://github.com/oldgregg89/EconomicMappingAPI.Solution)
 __
 
 ## Specs
