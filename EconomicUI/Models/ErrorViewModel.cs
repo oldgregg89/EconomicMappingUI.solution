@@ -1,6 +1,6 @@
 using System;
 
-namespace EconomicMappingUI.solution.Models
+namespace EconomicUI.Models
 {
     public class ErrorViewModel
     {

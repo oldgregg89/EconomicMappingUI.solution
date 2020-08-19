@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using EconomicMappingUI.solution.Models;
+using EconomicUI.Models;
 
-namespace EconomicMappingUI.solution.Controllers
+namespace EconomicUI.Controllers
 {
     public class HomeController : Controller
     {
