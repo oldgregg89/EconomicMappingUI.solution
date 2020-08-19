@@ -14,7 +14,7 @@ namespace EconomicUI.Models
     }
     public static async Task<string> GetSearchResults(string search)
     {
-      RestClient client = new RestClient("http://localhost:5000/api");
+      RestClient client = new RestClient("http://localhost:5000/api/states");
       RestRequest request = new RestRequest($"state/?name={search}", Method.GET);
       var response = await client.ExecuteTaskAsync(request);
       return response.Content;

@@ -44,6 +44,8 @@ in the terminal
 * fill in your `server`, `port`,`database`,`uid`, and `pwd`
 * Make suere to have your `MySQLWorkbench` open
 * make sure to download [Economic-API](https://github.com/oldgregg89/EconomicMappingAPI.Solution)
+* If everything is done correctly the home page should look like this:
+![HomePage](Assets/HomePage.png)
 __
 
 ## Specs
