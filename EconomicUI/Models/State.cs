@@ -23,5 +23,24 @@ namespace EconomicUI.Models
 
       return stateList;
     }
+    public static List<State> SearchStates(string name)
+    {
+      var apiCallTask = ApiHelper.GetSearchResults(name);
+      var result = apiCallTask.Result;
+
+      JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(result);
+      List<State> stateList = JsonConvert.DeserializeObject<List<State>>(jsonResponse.ToString());
+      return stateList;
+    }
+
+    public static State GetDetails(int id)
+    {
+      var apiCallTask = ApiHelper.Get(id);
+      var result = apiCallTask.Result;
+
+      JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
+      State state = JsonConvert.DeserializeObject<State>(jsonResponse.ToString());
+      return state;
+    }
   }
 }

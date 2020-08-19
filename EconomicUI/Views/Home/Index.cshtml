@@ -3,6 +3,11 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome to the USA</h1>
-    @Html.ActionLink("See all States", "Index", "States");
+    <h1 class="display-4">Economic Mapping DataBase</h1>
+    <input type="button" value="See all States" onclick="location.href='@Url.Action("Index", "States")';" class="btn btn-primary" />
+    @using (Html.BeginForm())
+    {
+        @Html.TextBox("name")
+        <input type="button" value="Search States" onclick="location.href='@Url.Action("Search", "States")';" class="btn btn-primary" />
+    }
 </div>

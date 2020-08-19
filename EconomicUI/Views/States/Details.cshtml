@@ -1,0 +1,16 @@
+@{
+  Layout = "_Layout";
+}
+
+@using EconomicUI.Models
+@model EconomicUI.Models.State
+
+<h1>State Details</h1>
+
+<ul>
+  <li>@Html.DisplayNameFor(model => model.StateId): @Html.DisplayFor(model => model.StateId)</li>
+  <li>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</li>
+  <li>@Html.DisplayNameFor(model => model.GDP): @Html.DisplayFor(model => model.GDP)</li>
+  <li>@Html.DisplayNameFor(model => model.MainExport): @Html.DisplayFor(model => model.MainExport)</li>
+  <li>@Html.DisplayNameFor(model => model.MainImport): @Html.DisplayFor(model => model.MainImport)</li>
+</ul>
