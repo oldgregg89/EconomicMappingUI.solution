@@ -20,6 +20,11 @@ namespace EconomicUI.Controllers
         {
             return View();
         }
+        public IActionResult Index(string name)
+        {
+            var searchedStates = State.SearchStates(name);
+            return View(searchedStates);
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

@@ -12,6 +12,14 @@ namespace EconomicUI.Models
     public int GDP { get; set; }
     public string MainExport { get; set; }
     public string MainImport { get; set; }
+    public State()
+    {
+
+    }
+    public State(string name)
+    {
+      Name = name;
+    }
     public static List<State> GetStates()
     {
       var apiCallTask = ApiHelper.GetAll();
@@ -42,6 +50,23 @@ namespace EconomicUI.Models
       State state = JsonConvert.DeserializeObject<State>(jsonResponse.ToString());
       
       return state;
+    }
+
+    public static void Post(State state)
+    {
+      string jsonState = JsonConvert.SerializeObject(state);
+      var apiCallTask = ApiHelper.Post(jsonState);
+    }
+
+    public static void Put(State state)
+    {
+      string jsonState = JsonConvert.SerializeObject(state);
+      var apiCallTask = ApiHelper.Put(state.StateId, jsonState);
+    }
+
+    public static void Delete(int id)
+    {
+      var apiCallTask = ApiHelper.Delete(id);
     }
   }
 }
