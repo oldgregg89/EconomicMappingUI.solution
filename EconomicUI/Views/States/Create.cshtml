@@ -1,0 +1,24 @@
+@{
+  Layout = "_Layout";
+}
+
+@model EconomicUI.Models.State
+
+<h4>Add a new State</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name)
+    @Html.LabelFor(model => model.GDP)
+    @Html.TextBoxFor(model => model.GDP)
+    @Html.LabelFor(model => model.MainImport)
+    @Html.TextBoxFor(model => model.MainImport)
+    @Html.LabelFor(model => model.MainExport)
+    @Html.TextBoxFor(model => model.MainExport)
+    
+
+    <input type="submit" value="Add new State" class="btn btn-default" />
+}
+<input type="button" value="Back to list" onclick="location.href='@Url.Action("Index", "States")';" class="btn btn-primary" />
+<input type="button" value="Return Home" onclick="location.href='@Url.Action("Index", "Home")';" class="btn btn-primary" />

@@ -1,0 +1,30 @@
+@{
+  Layout = "_Layout";
+}
+
+@model EconomicUI.Models.State
+
+<h2>Edit</h2>
+
+<h4>Edit this State: @Html.DisplayFor(model => model.Name)</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.StateId)
+
+  @Html.LabelFor(model => model.Name)
+  @Html.EditorFor(model => model.Name)
+
+  @Html.LabelFor(model => model.GDP)
+  @Html.TextBoxFor(model => model.GDP)
+
+  @Html.LabelFor(model => model.MainImport)
+  @Html.EditorFor(model => model.MainImport)
+
+  @Html.LabelFor(model => model.MainExport)
+  @Html.EditorFor(model => model.MainExport)
+
+  <input type="submit" value="Save" />
+}
+<input type="button" value="Back to list" onclick="location.href='@Url.Action("Index", "States")';" class="btn btn-primary" />
+<input type="button" value="Return Home" onclick="location.href='@Url.Action("Index", "Home")';" class="btn btn-primary" />

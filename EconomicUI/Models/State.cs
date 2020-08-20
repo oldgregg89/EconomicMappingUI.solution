@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Threading.Tasks;
 
 namespace EconomicUI.Models
 {
@@ -30,13 +31,13 @@ namespace EconomicUI.Models
 
       return stateList;
     }
-    public static State SearchStates(string name)
+    public static List<State> SearchStates(string name)
     {
       var apiCallTask = ApiHelper.GetSearchResults(name);
       var result = apiCallTask.Result;
 
-      JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
-      State state = JsonConvert.DeserializeObject<State>(jsonResponse.ToString());
+      JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(result);
+      List<State> state = JsonConvert.DeserializeObject<List<State>>(jsonResponse.ToString());
 
       return state;
     }

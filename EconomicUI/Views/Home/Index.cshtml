@@ -5,12 +5,11 @@
 <div class="text-center">
     <h1 class="display-4">Economic Mapping DataBase</h1>
     <input type="button" value="See all States" onclick="location.href='@Url.Action("Index", "States")';" class="btn btn-primary" /><br><br>
-    @using (Html.BeginForm())
+    @using (Html.BeginForm("Search", "States", FormMethod.Get))
     {
-        
         <div class="form-group">
             <p>Search States: @Html.TextBox("search", null , new {@class="form-control"})</p>
         </div>
-        <input type="submit" value="Search States" onclick="location.href='@Url.Action("Search", "States")';" class="btn btn-primary" />
+        <input type="button" value="Search States" onclick="location.href='@Url.Action("Search", "States")';" class="btn btn-primary" />
     }
 </div>

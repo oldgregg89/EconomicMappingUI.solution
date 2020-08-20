@@ -13,3 +13,9 @@
   <li>@Html.DisplayNameFor(model => model.MainExport): @Html.DisplayFor(model => model.MainExport)</li>
   <li>@Html.DisplayNameFor(model => model.MainImport): @Html.DisplayFor(model => model.MainImport)</li>
 </ul>
+
+
+<input type="button" value="Delete State" onclick="location.href='@Url.Action("Delete", "States", new { id = Model.StateId })';" class="btn btn-warning" />
+<input type="button" value="Return Home" onclick="location.href='@Url.Action("Index", "Home")';" class="btn btn-primary" />
+<input type="button" value="Edit State" onclick="location.href='@Url.Action("Edit", "States", new { id = Model.StateId })';" class="btn btn-primary" />
+<input type="button" value="Back to list" onclick="location.href='@Url.Action("Index", "States")';" class="btn btn-primary" />
