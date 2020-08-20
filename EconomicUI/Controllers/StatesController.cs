@@ -12,14 +12,14 @@ namespace EconomicUI.Controllers
           return View(allStates);
         }
 
-        [HttpGet("Search")]
+        // [HttpGet("Search")]
         public IActionResult Search(string name)
         {
           var searchedStates = State.SearchStates(name);
           return View(searchedStates);
         }
 
-        [HttpGet("Details")]
+        // [HttpGet("Details")]
         public IActionResult Details(int id)
         {
           var state = State.GetDetails(id);
